@@ -12,7 +12,7 @@ app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
-mongoose.connect('mongodb+srv://zsoltmarku910221:Barbara1987@cluster0.ughzbzx.mongodb.net/todoDB', {
+mongoose.connect('mongodb+srv://zsoltmarku91:ABCD1234@cluster0.ughzbzx.mongodb.net/todoDB', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });

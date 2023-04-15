@@ -3,16 +3,18 @@ const bodyParser = require("body-parser");
 const date = require(`${__dirname}/date.js`);
 const mongoose = require('mongoose');
 const _ = require('lodash');
-
+const dotenv = require('dotenv');
 const port = 3000;
 const app = express();
+
+dotenv.config();
 
 app.set("view engine", "ejs");
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
-mongoose.connect('mongodb+srv://zsoltmarku91:ABCD1234@cluster0.ughzbzx.mongodb.net/todoDB', {
+mongoose.connect(process.env.ATLAS_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
